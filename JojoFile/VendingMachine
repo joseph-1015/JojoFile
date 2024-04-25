@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+//Function to display the menu
+static void displayMenu() {
+	cout << "Welcome to vending machine" << endl;
+	cout << "1. Coke - $2.00" << endl;
+	cout << "2. Pepsi - $2.00" << endl;
+	cout << "3. Sprite - $1.00" << endl;
+	cout << "4. Water - $1.00" << endl;
+	cout << "5. Exit" << endl;
+}
+
+int main() {
+	double CokePrice = 2.00;
+	double PepsiPrice = 2.00;
+	double SpritePrice = 1.00;
+	double WaterPrice = 1.00;
+
+	int choice;
+	double money = 0.0;
+
+	do{
+		displayMenu();
+		cout << " Please select an item (1-5): ";
+		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			cout << "You have selected Coke. Please insert $" << CokePrice << endl;
+			break;
+		case 2:
+			cout << "You have selected Pepsi. Please insert $" << PepsiPrice << endl;
+			break;
+		case 3:
+			cout << "You have selected Sprite. Please insert $" << SpritePrice << endl;
+			break;
+		case 4:
+			cout << "You have selected Water. Please insert $" << WaterPrice << endl;
+			break;
+		case 5:
+			cout << "Exiting.... Thank you for using vending machine" << endl;
+			break;
+		default:
+			cout << "Invalid selection. Please try again." << endl;
+		}	
+		 {
+			cout << "Insufficient funds. Please try again." << endl;
+		}
+		 {
+			 cout << "Invalid amount. Please try again." << endl;
+		 }
+
+
+		 return 0;
+	}
+
+
+
+	while (choice != 5);
+
+}
